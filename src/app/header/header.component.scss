@@ -1,0 +1,50 @@
+$background-light: #c983d0;
+
+.header {
+    height: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    border-bottom: 1.5px solid $background-light;
+}
+
+.clock {
+    width: 25%;
+}
+.search {
+    width: 50%;
+}
+
+.search-container {
+    width: 100%;
+    margin-left: 20px;
+    border: 2px solid $background-light;
+    border-radius: 3px;
+}
+
+.inp, input:focus{
+    color: white;
+    width: 100%;
+    border: 0px;
+    outline: none;
+}
+
+::placeholder {
+    padding:10px;
+    color: white;
+}
+
+.question {
+    width: 25%;
+    padding-right: 15px;
+}
+
+* {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.fa {
+    color: white;
+}

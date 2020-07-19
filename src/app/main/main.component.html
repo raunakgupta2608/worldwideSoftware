@@ -1,0 +1,64 @@
+<div class="container">
+    <div class="row upper">
+      <div class="col-2">
+        <i class="fa fa-user-o fa-2x" aria-hidden="true"></i>
+      </div>
+      <div class="col-8">
+        <!-- <i class="fa fa-address-book-o fa-2x" aria-hidden="true"></i> -->
+      </div>
+      <div class="col-2">
+        <i class="fa fa-info-circle fa-2x" aria-hidden="true"></i>
+      </div>
+    </div>
+</div>     
+
+
+<!-- CHat boc starts here-->
+
+<div class="container">
+    <div class="row form-group">
+        <div class="col-xs-12 col-md-offset-2 col-md-8 col-lg-12 ">
+            <div class="panel panel-primary">
+                <div class="panel-body body-panel">
+                    <fieldset class="scheduler-border" *ngFor="let message of messages">
+                        <legend class="scheduler-border">
+                            <span class="badge badge-pill badge-light" style="padding: 5px 10px;">{{ message.date }}</span>
+                        </legend>
+                        <ul class="chat" *ngFor="let val of message.values">
+                            <li class="left clearfix">
+                                <div class="chat-img pull-left">
+                                    <i class="fa fa-user-o fa-3x" aria-hidden="true"></i>
+                                </div>
+                                <div class="chat-body clearfix">
+                                    <div class="header">
+                                        <strong class="primary-font">{{ val.name }}</strong>
+                                    </div>
+                                    <p>{{ val.message }}</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </fieldset>
+                </div>
+                <div class="panel-footer clearfix position-sticky row">
+                    <textarea class="form-control textarea" rows="3" 
+                        placeholder="Message maxxphysio" #text (keyup.enter)="onKeyUp(text.value)"></textarea>
+                    <div class="icon-group col-6">
+                        <i class="fa fa-user-o fa" aria-hidden="true"></i>
+                        <i class="fa fa-bold" aria-hidden="true"></i>
+                        <i class="fa fa-italic" aria-hidden="true"></i>
+                        <i class="fa fa-underline" aria-hidden="true"></i>
+                        <i class="fa fa-paperclip" aria-hidden="true"></i>
+                        <i class="fa fa-list-ol" aria-hidden="true"></i>
+                        <i class="fa fa-list-ul" aria-hidden="true"></i>
+                    </div>
+                    <div class="col-3"></div>
+                    <div class="icon-group col-3">
+                        <i class="fa fa-smile-o" aria-hidden="true"></i>
+                        <i class="fa fa-microphone" aria-hidden="true"></i>
+                        <i class="fa fa-at" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

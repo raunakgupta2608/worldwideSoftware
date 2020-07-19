@@ -1,0 +1,85 @@
+
+* {
+    font-size: 12px;
+}
+
+.row{
+    border-bottom: 0.5px solid #99b898;
+}
+
+.upper {
+    padding: 10px 0px;
+}
+
+.chat
+{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.chat li.left .chat-body
+{
+    margin-left: 30px;
+    padding:5px 1px;
+}
+
+legend.scheduler-border {
+    width:inherit;
+    margin-left: calc(50% - 35px - 2px);
+}
+
+.badge {
+    border:1px solid black;
+}
+
+fieldset.scheduler-border {
+    border-top: 1px groove #ddd !important;
+    padding: 0 1.4em 1.4em 1.4em !important;
+}
+
+.panel-footer {
+    border: 2px solid #99b898; 
+    padding-bottom:5px;
+}
+
+.fa {
+    font-size: 30px;
+}
+
+ul  i {
+    color: pink;
+}
+
+.icon-group i {
+    padding: 10px;
+    font-size: 20px;
+}
+
+
+
+// .chat li
+// {
+//     // margin-bottom: 10px;
+//     // padding-bottom: 5px;
+// }
+// .chat-img {
+//     // padding: 20px 10px;
+// }
+
+// .chat li .chat-body p
+// {
+//     margin: 0;
+//     color: #777777;
+// }
+
+// .panel .slidedown .glyphicon, .chat .glyphicon
+// {
+//     margin-right: 5px;
+// }
+
+// .panel-body
+// {
+//     overflow-y: scroll;
+//     height: 250px;
+// }

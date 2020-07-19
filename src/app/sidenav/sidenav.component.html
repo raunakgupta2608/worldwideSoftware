@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="row">
+      <div class="col-3">
+        <i class="fa fa-address-book-o fa-2x" aria-hidden="true"></i>
+      </div>
+      <div class="col-6">
+        <span>Blur Section</span>
+      </div>
+      <div class="col-3">
+        <i class="fa fa-pencil-square-o fa-2x" aria-hidden="true"></i>
+      </div>
+    </div>
+    
+    <div class="row" *ngIf="!secList" (click)="showLessSecond()">
+        <div class="col-3">
+            <i class="fa fa-angle-down fa-2x" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="row" *ngIf="secList">
+        <div class="col-md-12 mb-4" style="padding: 0px;">
+            <ul class="list-group">
+                <li class="list-group-item background-primary" *ngFor="let list of secondList">
+                  <i class={{list.icon}}></i>
+                  <span class="list-text">{{list.text}}</span>
+                </li> 
+                <li class="list-group-item background-primary" (click)="showLessSecond()">
+                  <i class="fa fa-long-arrow-up"></i>
+                  <span class="list-text">Show less</span>
+                </li> 
+            </ul>           
+        </div>
+    </div> 
+
+    <div class="row" (click)="showLessThird()">
+        <div class="col-3">
+            <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        </div>
+        <div class="col-6">
+            <span>Channel</span>
+        </div>
+        <div class="col-3">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="row" *ngIf="thiList">
+        <div class="col-md-12 mb-4" style="padding: 0px;">
+            <ul class="list-group">
+                <li class="list-group-item background-primary" *ngFor="let list of thirdList">
+                    <i class={{list.icon}}></i>
+                    <span class="list-text">{{list.text}}</span>
+                </li>
+            </ul>           
+        </div>
+    </div> 
+
+    <div class="row" (click)="showLessFourth()">
+        <div class="col-3">
+            <i class="fa fa-arrow-down" aria-hidden="true"></i>
+        </div>
+        <div class="col-6" style="padding:0%;">
+            <span>Direct Messages</span>
+        </div>
+        <div class="col-3">
+            <i class="fa fa-plus" aria-hidden="true"></i>
+        </div>
+    </div>
+    <div class="row" *ngIf="fourList">
+        <div class="col-md-12 mb-4" style="padding: 0px;">
+            <ul class="list-group">
+                <li class="list-group-item background-primary" *ngFor="let list of fourthList">
+                    <i class={{list.icon}}></i>
+                    <span class="list-text">{{list.text}}</span>
+                </li>
+            </ul>           
+        </div>
+    </div> 
+</div>
